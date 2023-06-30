@@ -1,6 +1,6 @@
 version: "3"
 services:
-  cloudreve:
+  crdw:
     image: cloudreve/cloudreve
     container_name: crdw
     stdin_open: true
