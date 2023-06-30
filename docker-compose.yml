@@ -12,7 +12,7 @@ services:
       - ./:./
     privileged: true
     
-  Aria2-Pro:
+  ap:
     container_name: aria2-pro
     image: p3terx/aria2-pro
     environment:
@@ -30,9 +30,11 @@ services:
     volumes:
       - ${PWD}/aria2-config:/config
       - ${PWD}/aria2-downloads:/downloads
+    ports:
+      - 6800:6800
 # If you use host network mode, then no port mapping is required.
 # This is the easiest way to use IPv6 networks.
-    network_mode: host
+#    network_mode: host
 #    network_mode: bridge
 #    ports:
 #      - 6800:6800
