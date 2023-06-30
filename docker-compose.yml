@@ -2,7 +2,7 @@ version: "3"
 services:
   cloudreve:
     image: cloudreve/cloudreve
-    container_name: cloudreve-dw
+    container_name: crdw
     stdin_open: true
     tty: true
     restart: always
