@@ -28,8 +28,8 @@ services:
       - CUSTOM_TRACKER_URL=
       - TZ=Asia/Shanghai
     volumes:
-      - ${PWD}/aria2-config:/config
-      - ${PWD}/aria2-downloads:/downloads
+      - aria2config:/config
+      - aria2downloads:/downloads
     ports:
       - 6800:6800
 # If you use host network mode, then no port mapping is required.
@@ -46,3 +46,8 @@ services:
       driver: json-file
       options:
         max-size: 1m
+volumes:
+  aria2config:
+    size: 50M
+  aria2downloads:
+    size: 2048M
