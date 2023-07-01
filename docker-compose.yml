@@ -29,7 +29,7 @@ services:
       - TZ=Asia/Shanghai
     volumes:
       - aria2config:/config
-      - aria2downloads:/downloads
+      - aria2downloads:/aria2
     ports:
       - 6800:6800
 # If you use host network mode, then no port mapping is required.
@@ -50,4 +50,4 @@ volumes:
   aria2config:
     size: 50M
   aria2downloads:
-    size: 2048M
+    size: 3072M
